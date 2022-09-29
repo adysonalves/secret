@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --cor-principal: #161616;
+    --cor-secundaria: #20a4f3;
+    --cor-fundo: #f7f7ff;
+    --font-principal: 'Open Sans', sans-serif;
+}
+
+
+
+body {
+    font-family: var(--font-principal);
+    width: 100%;
+    min-height: -webkit-fill-available;
+    font-size: 1rem;
+    background-color: var(--cor-principal);
+}
+
+div.popup {
+    width: 100%;
+    height: 100vh;
+    background: rgb(0 0 0 / 40%);
+    position: absolute;
+    z-index: 999999;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 120px 15px;
+}
+
+
+div.popup .container-popup {
+    width: 100%;
+    background-image: url(/assets/background-popup.png);
+    max-width: 400px;
+    padding: 70px 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border-radius: 10px;
+}
+
+div.popup .container-popup button.close-popup {
+    width: 32px;
+    height: 32px;
+    border-radius: 30px;
+    border-color: var(--cor-secundaria);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+div.popup .container-popup h2 {
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.4em;
+}
+
+div.popup .container-popup p {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+div.popup .container-popup button {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: 0;
+    font-family: var(--font-principal);
+    font-weight: 600;
+}
+
+
+header {
+    width: 100%;
+    height: 60px;
+    color: var(--cor-fundo);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header a {
+    color: var(--cor-fundo);
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid var(--cor-fundo);
+    padding: 5px 8px;
+    border-radius: 5px;
+    transition: 0.8s;
+}
+
+header h1 a{
+    border: 0;
+}
+
+header a:hover {
+    background-color: var(--cor-secundaria);
+}
+
+main.login.cadastro {
+    opacity: 0;
+}
+
+
+main.login {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+main.login h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+main.login span a {
+    text-align: center;
+    display: block;
+    font-weight: 500;
+    margin-top: 25px;
+    text-decoration: none;
+    color: var(--cor-principal);
+}
+
+main.login span a:hover{
+    text-decoration: underline;
+}
+
+main.login form {
+    width: 100%;
+}
+
+main.login form .row {
+    margin-bottom: 25px;
+    position: relative;
+
+}
+
+main.login form input {
+    width: 100%;
+    height: 35px;
+    padding: 5px 22px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid rgb(211 211 211 / 30%);
+    font-family: var(--font-principal);
+    font-size: 1rem;
+}
+
+main.login form input:focus {
+    border-color: var(--cor-secundaria);
+    transition: ease-in-out 0.4s;
+}
+
+main.login form .row i {
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+main.login form button {
+    background-color: var(--cor-principal);
+    padding: 10px;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 25px
+}
+
+main.login form button:hover {
+    background-color: var(--cor-secundaria);
+    cursor: pointer;
+    transition: ease-in 0.2s;
+}
+
+p.errorMsg {
+    padding: 10px 15px;
+    background-color: #ffd3d3;
+    border: 1px solid #ffb8b8;
+    margin-bottom: 10px;
+    color: #ff6f6f;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+p.successMsg {
+    padding: 10px 15px;
+    background-color: #d9fbd6;
+    border: 1px solid #bbf1b6;
+    margin-bottom: 10px;
+    color: #81d575;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+footer {
+    width: 100%;
+    height: 35px;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 2.4rem;
+}

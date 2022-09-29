@@ -1,0 +1,34 @@
+{{>header}}
+
+<main class="page">
+    <div class="container">
+        {{>navProfile}}
+
+        <div class="conteudo">
+            <h3>Sua timeline <strong>@{{nameUser}}</strong></h3>
+
+            {{>_msg}}
+
+            {{#if ask}}
+            {{#each ask}}
+            <div class="ask">
+                <h3>{{ask}}</h3>
+                {{#if answer}}
+                <p>{{answer}}</p>
+                {{else}}
+                <form action="/profile/answer" method="post">
+                    <input type="hidden" name="id" value="{{id}}">
+                    <div class="row">
+                        <textarea name="answer" id="answer" placeholder="Digite sua resposta..." required></textarea>
+                    </div>
+                    <button type="submit">Responder</button>
+                </form>
+                {{/if}}
+            </div>
+            {{/each}}
+            {{else}}
+            <p class="not-ask">Você não tem perguntas para responder..</p>
+            {{/if}}
+        </div>
+    </div>
+</main>

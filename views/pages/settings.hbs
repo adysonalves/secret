@@ -1,0 +1,39 @@
+{{>header}}
+
+<main class="page">
+    <div class="container">
+        {{>navProfile}}
+
+        <div class="conteudo">
+            <h3>Configurações de <strong>@{{nameUser}}</strong></h3>
+
+            <div class="spaceBottom"></div>
+
+            {{>_msg}}
+
+            {{#if erros}}
+            {{#each erros}}
+            <p class="errorMsg">{{mensagem}}</p>
+            {{/each}}
+            {{else}}
+            {{/if}}
+
+            <form class="formSettings" action="/profile/settings" method="post">
+                <input type="hidden" name="id" value="{{idUser}}">
+                <div class="row">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" value="{{email}}" required>
+                </div>
+
+                <div class="row">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" required>
+                </div>
+
+                <button type="submit">Salvar alterações</button>
+
+
+            </form>
+        </div>
+    </div>
+</main>

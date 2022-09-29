@@ -1,0 +1,13 @@
+<aside>
+    {{!-- <img src="/assets/user.png" alt="profile"> --}}
+
+    <a href="/profile">Timeline</a>
+    <a href="/profile/settings">Configurações</a>
+    <a href="/@/{{nameUser}}" class="profile">Meu perfil</a>
+
+    <div class="url-profile">
+        <span><i class="fa-solid fa-retweet"></i> Compartilhe seu perfil</span>
+        <input type="text" class="urlUser" value="/@/{{nameUser}}">
+        <button onclick="copiarPerfil()"><i class="fa-regular fa-copy"></i></button>
+    </div>
+</aside>

@@ -1,0 +1,31 @@
+{{>header}}
+<div class="container">
+    <main class="login">
+
+        <h2>Entrar</h2>
+        {{>_msg}}
+
+        {{#if erros}}
+        {{#each erros}}
+        <p class="errorMsg">{{mensagem}}</p>
+        {{/each}}
+        {{else}}
+        {{/if}}
+        <form action="/signin" method="post">
+
+            <div class="row">
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+                <i class="fa-regular fa-envelope-open"></i>
+            </div>
+
+            <div class="row">
+                <input type="password" name="senha" id="senha" placeholder="******" required>
+                <i class="fa-solid fa-key"></i>
+            </div>
+
+            <button type="submit">Fazer login</button>
+        </form>
+
+        <span><a href="/">Não possui conta? <strong>Criar conta</strong></a></span>
+    </main>
+</div>

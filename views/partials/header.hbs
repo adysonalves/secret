@@ -1,0 +1,12 @@
+<header>
+    <h1><a href="/">Secret</a></h1>
+
+    {{#unless logado}}
+    <a href="/login">Entrar</a>
+    {{else}}
+    <div class="nav-menu">
+        <a href="/profile">Perfil</a>
+        <a href="/logout">Sair</a>
+    </div>
+    {{/unless}}
+</header>

@@ -1,0 +1,47 @@
+{{>header}}
+
+<div class="popup">
+    <div class="container-popup">
+        
+        <h2>Bem-vindo(a) ao Secret</h2>
+        <p>Aqui é possível enviar e receber mensagens de forma totalmente anônima.
+        <br><br>
+        Evite propagar ódio ou cometer quaisquer crimes contra a reputação do outro.
+        </p>
+        <button onclick="closePopup()">Começar agora</button>
+    </div>
+</div>
+
+<div class="container">
+    <main class="login cadastro">
+
+        <h2>Cadastre-se</h2>
+        {{>_msg}}
+
+        {{#if erros}}
+        {{#each erros}}
+        <p class="errorMsg">{{mensagem}}</p>
+        {{/each}}
+        {{else}}
+        {{/if}}
+        
+        <form action="/signup" method="post">
+            <div class="row">
+                <input type="text" name="username" id="nome" placeholder="Seu username" required autocomplete="off">
+                <i class="fa-regular fa-circle-user"></i>
+            </div>
+
+            <div class="row">
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+                <i class="fa-regular fa-envelope-open"></i>
+            </div>
+
+            <div class="row">
+                <input type="password" name="senha" id="senha" placeholder="******" required>
+                <i class="fa-solid fa-key"></i>
+            </div>
+
+            <button type="submit">Criar conta</button>
+        </form>
+    </main>
+</div>

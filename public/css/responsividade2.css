@@ -1,0 +1,18 @@
+@media screen and (max-width: 768px){
+    .ask-feed p{
+        text-align: center;
+    }
+
+    .ask-feed h3{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .ask h3{
+        text-align: left;
+    }
+
+    section.ask-container form .row textarea{
+        font-size: 0.7rem;
+    }
+}

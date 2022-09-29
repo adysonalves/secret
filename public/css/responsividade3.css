@@ -1,0 +1,59 @@
+@media screen and (max-width: 1110px) {
+    main.page .container aside a {
+        width: 100%;
+        height: 65px;
+        line-height: 2.8rem;
+    }
+
+    .url-profile span{
+        font-size: 0.8rem;
+
+    }
+}
+
+@media screen and (max-width: 734px) {
+
+    main.page .container {
+        flex-direction: column-reverse;
+    }
+
+    p.not-ask {
+        text-align: center;
+    }
+
+    main.page .container aside {
+        width: 100%;
+    }
+
+    main.page .container aside img {
+        display: none;
+    }
+
+    main.page .container .conteudo {
+        width: 100%;
+    }
+
+    main.page .container .conteudo .spaceBottom{
+        margin-bottom: 30px;
+    }
+
+    main.page .container .conteudo h3 {
+        text-align: center;
+    }
+
+    main.page .container .conteudo .ask h3 {
+        text-align: left;
+    }
+
+    .ask form button {
+        width: 100%;
+    }
+
+    form.formSettings{
+        max-width: 100%;
+    }
+
+    p.successMsg {
+        text-align: center;
+    }
+}
